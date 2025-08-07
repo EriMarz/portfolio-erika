@@ -1,11 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel ="stylesheet" type="text/css" href="style.css">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Learn about your next full stack developer" />
+    <title>Erika Marin | Portfolio</title>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <!-- <h1 class="logo">Erika Marin</h1>  -->
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+    <section class = "hero">
+        <section class="col-two">
+            <h2>Hi, I'm Erika <span class ="shake-hand">👋</span></h2>
+            <p>I'm a budding software engineer who loves building delightful, accessible, and impactful web experiences.</p>
+            <button class="button-one">See My Work</button>
+        </section>
+        <section class="col-one">
+            <img src="assets/coding_vector.png" class="cartoon" alt="Line drawing of a woman on a laptop with a mug to her left and a weaving hanging off of the wall.">
+        </section>
+    </section>
+    <hr>
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>Check out some of these awesome projects.</p>
+        <div class="project-grid">
+            <div class="card-one">
+                <h3>Text Adventure Game</h3>
+                <a href="https://github.com/EriMarz/fcny-unit-5-text-adventure.git">
+                    <img class ="dino" src="assets/dino4.png" alt ="Pixelated dinosaur image">
+                </a>
+            </div>
+            <div class="card-two">
+                <h3>Tech Talk</h3>
+                <img class ="speech" src="assets/techtalk.png" alt ="Pixelated image of someone giving a speech.">
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>A former higher ed professional turned software engineer with a Masters in Public Administration, I blend creativity and logic in everything I build. When I'm not coding, you'll find me in the ceramics studio, weaving, or teaching yoga. </p>
+    </section>
+    <hr>
+    <section id="contact">
+        <h2>Contact Me 🙋🏻‍♀️</h2>
+        <section class = "logos"
+            < a href="www.linkedin.com/in/erika-s-marin">
+                <img class ="linkedin" src="assets/Linkedin_circle_black-512.png" alt ="LinkedIn logo">
+            </a>
+            <a href="https://github.com/EriMarz">
+                <img class ="github" src="assets/github2.png" alt ="Github logo">
+            </a>
+        </section>
+        <form action="send_email.php" method="POST">
+            <label for="name">Name:</label><br><br>
+            <input type="text" id="name" name="name" required> <br><br>
+            <label for="email">Email:</lable><br><br>
+            <input type="email" id="email" name="email" required> <br><br>
+            <label for="message">Message:</label> <br><br>
+            <textarea id="message" name="message" rows="5" required></textarea><br><br>
+            <input id="button-two"type="submit" value="Send Message"> <br><br>
+        </form>
+    </section>
+    <hr>
+    <footer>
+       <p>Copyright 2025</p>
+    </footer>
 </body>
 </html>

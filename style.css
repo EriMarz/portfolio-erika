@@ -1,0 +1,370 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* end of code that removes inherited css. My code begins below */
+
+body {
+  font-family: Manrope, Arial, Helvetica, sans-serif;
+}
+
+hr {
+  border-color: #1d1d1d;
+  border-width: 1px;
+  margin: 0px;
+}
+
+header ul {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.3em;
+}
+/* Below attemps to keep the header stuck in position as user scrolls down the page. */
+/* header {
+  position:sticky;
+  top:0;
+} */
+
+/* header::-webkit-scrollbar{
+  scrollbar-color: gold;
+}  */
+
+.nav-links {
+  display: flex; /*Horizontal Layout*/
+  flex-direction: row;
+  /* background-color:rgb(93, 192, 227); */
+  padding: 1.3em;
+  list-style: none;
+  text-decoration: none;
+}
+
+.nav-links a {
+  padding: .5em 1em;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.nav-links a:hover {
+  background-color: gold;
+  font-weight: bolder;
+  color:#ffffff;
+  border-radius: 8px;
+  padding: .5em 1em;
+  transform: translateY(-1em);
+  box-shadow: 5px 5px 5px lightgray;
+  transform: scale(1.1);
+}
+
+.hero {
+  display: flex;
+  background-color: rgb(227, 227, 255);
+  padding: 10em 5em;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.hero h2, #contact h2{
+  font-size: 35px;
+  font-weight: bold;
+  padding: 1em 0em;
+}
+
+.hero p {
+  font-size: 20px;
+  padding: 0em 0em 1.8em 0em;
+  line-height: 1.5em;
+  width:600px;
+  text-align: left;
+}
+
+/* .shake-hand {
+  transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
+} */
+.shake-hand:hover{
+  /* animation: alternate-reverse 0.5s cubic-bezier(.36,.07,.19,.97) both; */
+  /* font-size: 50px; /* Adjust emoji size as needed */
+  /* animation: moveEmoji 3s ease-in-out infinite; / */ 
+  /* Basic styling for the emoji, perhaps adjusting font-size */
+  font-size: 1.3em; /* Adjust as needed */
+  display: inline-block; /* Essential for applying transforms correctly */
+  animation: wave-animation 3s infinite; /* Apply the animation */
+  transform-origin: 70% 70%; /* Adjust the origin of the rotation for a natural wave */
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  75% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.col-two {
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.col-one{
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 600px;
+  /* padding: 2em; */
+}
+
+.button-one {
+  font-size: 20px;
+  padding: 1em 0em;
+  border-radius: 10px;
+  font-weight: bold;
+  background-color: #ffffff;
+  max-width: 12em;
+  transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.button-one:hover {
+  font-size: 21px;
+  background-color: gold;
+  border-color:gold;
+  font-weight: bolder;
+  color:#ffffff;
+  border-radius: 8px;
+  padding: 1em 0em;
+  transform: translateY(-1em);
+  box-shadow: 5px 5px 5px lightgray;
+  transform: scale(1.1);
+}
+
+.cartoon {
+  width: 500px;
+  padding: 1.5em;
+  justify-content: space-evenly;
+  gap: 10em;
+}
+
+/* Project section Below */
+
+#projects {
+  padding: 5em 5em;
+}
+
+#projects h2 {
+  font-size: 35px;
+  font-weight: bolder;
+  margin: 0.5em 0em;
+  text-align: center;
+  padding: 20px 50px;
+}
+
+#projects  p {
+  text-align: center;
+  padding: 20px 50px;
+  font-size: 20px;
+}
+
+.project-grid {
+  display: flex;
+  flex-direction: row;
+  padding: 2em;
+  flex-wrap: wrap;
+  justify-content:center;
+}
+
+.card-one,
+.card-two {
+  border: 1px solid #999;
+  border-radius: 10px;
+  margin: 1em;
+  grid-template-rows: max-content;
+  transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.card-one h3,
+.card-two h3 {
+  text-align: center;
+  font-size: larger;
+  font-weight: bold;
+  margin: 2em 0 0 0;
+}
+
+.card-one p,
+.card-two p {
+  text-align: justify;
+  padding: 3em;
+  height: 8em;
+}
+
+.card-one:hover, .card-two:hover {
+  background-color: gold;
+  border-color: gold;
+  transform: translateY(-1em);
+  box-shadow: 5px 5px 5px lightgray;
+  transform: scale(1.1);
+  color:#ffffff;
+}
+
+.dino, .speech{
+  width: 15em;
+  padding: 1em;
+}
+#about { 
+    display: flex;
+    background-color: rgb(227, 227, 255);
+    padding: 10em 5em;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#about h2 {
+  font-size: 35px;
+  font-weight: bolder;
+  margin: 0.5em 0em;
+  text-align: left;
+}
+
+#about p {
+  font-size: 20px;
+  padding: 0em 0em 1.8em 0em;
+  line-height: 1.5em;
+}
+
+/* Below works on the contact form section */
+
+form {
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+  
+
+  
+  /* text-align: left; */
+}
+
+/* #contact {
+  justify-content: center;
+  text-align:center;
+  padding:10em 5em;
+} */
+
+/* #contact label{
+  padding: .5em;
+  text-align: center;
+} */
+
+#contact h2{
+  text-align: center;
+  padding: 2em 2em 0em 2em;
+}
+
+.logos{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  padding:2em;
+}
+.github{
+  width: 100px;
+  /* text-align: center; */
+} 
+
+.linkedin {
+  width: 85px;
+  /* text-align: center; */
+}
+
+#name, #email, #message {
+  font-size: 1em;
+  padding: 1em;
+  line-height: 1em;
+  height: 1em;
+  width: 10em;
+  /* text-align: left; */
+}
+
+#button-two{
+  border-radius: 10px;
+  font-size: 1em;
+  background-color: #ffffff;
+  padding: .3em;
+  font-weight: bold;
+}
+
+#button-two:hover{
+  background-color: gold;
+  border-color: gold;
+  transform: translateY(-1em);
+  box-shadow: 5px 5px 5px lightgray;
+  transform: scale(1.1);
+  color:#ffffff;
+}
+
+/* footer section */
+footer {
+  background-color: rgb(227, 227, 255); 
+  color:#ffffff;
+  height: 100px;
+  text-align: center;
+}
+
+footer p{
+  padding: 2em;
+}
