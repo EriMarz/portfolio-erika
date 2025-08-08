@@ -1,6 +1,8 @@
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
+   Code below to help remove inherited styling
+   to start from scratch
 */
 
 html, body, div, span, applet, object, iframe,
@@ -74,7 +76,7 @@ header ul {
 }  */
 
 .nav-links {
-  display: flex; /*Horizontal Layout*/
+  display: flex;
   flex-direction: row;
   /* background-color:rgb(93, 192, 227); */
   padding: 1.3em;
@@ -110,13 +112,13 @@ header ul {
 }
 
 .hero h2, #contact h2{
-  font-size: 35px;
-  font-weight: bold;
+  font-size: 38px;
+  font-weight: bolder;
   padding: 1em 0em;
 }
 
 .hero p {
-  font-size: 20px;
+  font-size: 23px;
   padding: 0em 0em 1.8em 0em;
   line-height: 1.5em;
   width:600px;
@@ -127,32 +129,18 @@ header ul {
   transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
 } */
 .shake-hand:hover{
-  /* animation: alternate-reverse 0.5s cubic-bezier(.36,.07,.19,.97) both; */
-  /* font-size: 50px; /* Adjust emoji size as needed */
-  /* animation: moveEmoji 3s ease-in-out infinite; / */ 
-  /* Basic styling for the emoji, perhaps adjusting font-size */
-  font-size: 1.3em; /* Adjust as needed */
-  display: inline-block; /* Essential for applying transforms correctly */
-  animation: wave-animation 3s infinite; /* Apply the animation */
-  transform-origin: 70% 70%; /* Adjust the origin of the rotation for a natural wave */
+  font-size: 1.3em;
+  display: inline-block;
+  animation: wave-animation 3s infinite; 
+  transform-origin: 70% 70%; 
 }
 
 @keyframes wave-animation {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(15deg);
-  }
-  50% {
-    transform: rotate(-15deg);
-  }
-  75% {
-    transform: rotate(15deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
+  0% {transform: rotate(0deg);}
+  25% {transform: rotate(15deg);}
+  50% {transform: rotate(-15deg);}
+  75% {transform: rotate(15deg);}
+  100% {transform: rotate(0deg);}
 }
 
 .col-two {
@@ -172,8 +160,8 @@ header ul {
 }
 
 .button-one {
-  font-size: 20px;
-  padding: 1em 0em;
+  font-size: 24px;
+  padding: 1em 1em;
   border-radius: 10px;
   font-weight: bold;
   background-color: #ffffff;
@@ -182,13 +170,13 @@ header ul {
 }
 
 .button-one:hover {
-  font-size: 21px;
+  font-size: 25px;
   background-color: gold;
   border-color:gold;
   font-weight: bolder;
   color:#ffffff;
   border-radius: 8px;
-  padding: 1em 0em;
+  padding: 1em 1em;
   transform: translateY(-1em);
   box-shadow: 5px 5px 5px lightgray;
   transform: scale(1.1);
@@ -208,7 +196,7 @@ header ul {
 }
 
 #projects h2 {
-  font-size: 35px;
+  font-size: 38px;
   font-weight: bolder;
   margin: 0.5em 0em;
   text-align: center;
@@ -218,7 +206,7 @@ header ul {
 #projects  p {
   text-align: center;
   padding: 20px 50px;
-  font-size: 20px;
+  font-size: 23px;
 }
 
 .project-grid {
@@ -266,6 +254,7 @@ header ul {
   width: 15em;
   padding: 1em;
 }
+
 #about { 
     display: flex;
     background-color: rgb(227, 227, 255);
@@ -275,7 +264,7 @@ header ul {
 }
 
 #about h2 {
-  font-size: 35px;
+  font-size: 38px;
   font-weight: bolder;
   margin: 0.5em 0em;
   text-align: left;
@@ -293,33 +282,26 @@ form {
   justify-content: center;
   text-align: center;
   font-size: 20px;
-  
-
-  
-  /* text-align: left; */
+  padding: 2em;
 }
 
-/* #contact {
+#contact {
   justify-content: center;
   text-align:center;
-  padding:10em 5em;
-} */
-
-/* #contact label{
-  padding: .5em;
-  text-align: center;
-} */
+}
 
 #contact h2{
   text-align: center;
   padding: 2em 2em 0em 2em;
+  justify-content: center;
 }
 
 .logos{
   display:flex;
   flex-direction: row;
   justify-content: center;
-  padding:2em;
+  padding:.5em 1em 1em 5em;
+  text-align: center;
 }
 .github{
   width: 100px;
@@ -327,8 +309,15 @@ form {
 } 
 
 .linkedin {
-  width: 85px;
+  width: 90px;
   /* text-align: center; */
+}
+
+.shake-person:hover{
+  font-size: 1.3em;
+  display:inline-block;
+  animation: wave-animation 3s infinite;
+  transform-origin: 70% 70%;
 }
 
 #name, #email, #message {
